@@ -90,7 +90,7 @@ VERSION       ?= $(shell git describe --tags --always --dirty --match "v*")
 BUILD_FLAGS   ?= -v
 LDFLAGS       ?= -X sigs.k8s.io/external-dns/pkg/apis/externaldns.Version=$(VERSION) -w -s
 ARCH          ?= amd64
-SHELL          = /bin/bash
+SHELL          = /run/current-system/sw/bin/bash
 IMG_PLATFORM  ?= linux/amd64,linux/arm64,linux/arm/v7
 IMG_PUSH      ?= true
 IMG_SBOM      ?= none
